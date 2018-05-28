@@ -1,7 +1,8 @@
 <?php
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->middleware('auth');
 
-Route::get('login', 'Usuario\LoginController@showLoginForm');
-
-Route::post('login', 'Usuario\LoginController@login')->name('login');
+// RUTAS PARA EL LOGUEO DE USUARIO
+Route::get('login', 'Usuario\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Usuario\LoginController@login');
+Route::post('logout', 'Usuario\LoginController@logout')->name('logout');

@@ -136,3 +136,116 @@ input[type="checkbox"]:checked + span:before {
   border-right-color: #ef5350 !important;
   border-bottom-color: #ef5350 !important;
 }
+
+/*
+  CSS PARA LA PARTE DEL MENU
+*/
+.footer{
+  
+  padding: 1rem 3rem;
+}
+
+section#menu .navbar{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 15px 2px #474A4D;
+          box-shadow: 0 1px 15px 2px #474A4D;
+}
+
+.navbar-brand a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+section#menu .nav-link{
+  color: #000;
+}
+section#menu .navbar-nav{
+  display: flex;
+  justify-content: space-around;
+}
+.fa-user-circle-o{
+  font-size: 2.5rem;
+  margin-right: 1.5rem;
+  color: #00A1C7;
+}
+
+.menu-card{
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px 20px;
+}
+
+.menu-card .card{
+  transition: all .3s ease;
+}
+
+.menu-card .card:hover{
+  transform: scale(1.1);
+  z-index: 10;
+  -webkit-box-shadow: -5px 5px 15px 2px #474A4D;
+          box-shadow: -5px 5px 15px 2px #474A4D;
+}
+
+.menu-card .card .card-header{
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #6c757d;
+  background-color: #4682B4;
+  color: #fff;
+}
+
+.menu-card .card .card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card .card .card-icon{
+  font-size: 6rem;
+  color: #00A1C7;
+}
+
+.menu-card-link{
+  text-decoration: none !important;
+}
+
+/*
+  PANEL DE REGISTROS DE USUARIOS
+*/
+.panel-registro-usuarios{
+  margin-top: 2rem;
+}
+
+.panel-registro-usuarios .card-header{
+  border-bottom: 1px solid #474A4D;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.panel-registro-usuarios .icon{
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  font-size: 2rem;
+}
+
+.panel-registro-usuarios .row{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#form-registro-usuarios #form-content.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-control{
+  border: 1px solid #9e9e9e;
+}

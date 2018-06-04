@@ -20,8 +20,13 @@ class RegisterController extends Controller
     public function index()
     {
         $usuarios = Usuario::all();
-        return $usuarios;
-        //return view('usuario.mantenimiento', compact('usuarios'));
+        $usuarios->each(function($usuarios)
+        {
+            $usuarios->unidad;
+            $usuarios->perfil;
+        });
+        
+        return view('usuario.mantenimiento', compact('usuarios'));
     }
 
     /**

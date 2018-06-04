@@ -19,7 +19,7 @@
 	            <nav class="navbar navbar-expand-lg navbar-light d-flex">
 	                <div class="navbar-brand">
 	                    <img src="{{ asset('images/inei.png') }}" height="50" alt="latigo inei">
-	                    <a href="#">latiGO</a>
+	                    <a href="{{ route('menu') }}">latiGO</a>
 	                </div>                            
 	                <div class="">
 

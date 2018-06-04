@@ -9,7 +9,7 @@
 		<div class="card border-secondary mb-3 panel-registro-usuarios">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<span class="fa fa fa-briefcase icon" style="top: 17px;"></span> Unidad
-				<button class="btn btn-success" data-toggle="modal" data-target="#ventanaRegistros">Nueva unidad +</button>
+				<button class="btn btn-success" data-toggle="modal" data-target="#ventanaRegistros">Nueva unidad <span class="fa fa-plus"></span></button>
 			</div>
 			
 			<div class="card-body text-secondary">
@@ -54,7 +54,10 @@
 	        	{{ csrf_field() }}
 	        	<div class="form-group d-flex">	        		
         			<label for="txtunidad" class="col-md-3">Unidad :</label>
-        			<input id="txtunidad" class="form-control col-md-9" type="text" name="unidad">      			        	
+        			<div class="col-md-9">
+        				<input id="txtunidad" class="form-control {{ $errors->has('unidad') ? 'is-invalid' : '' }}" type="text" name="unidad">
+        				{!! $errors->first('unidad', '<span class="text-danger">:message</span>') !!}
+        			</div>
 	        	</div>
 	        	<button class="btn btn-primary pull-right">Guardar</button>
 	        </form>

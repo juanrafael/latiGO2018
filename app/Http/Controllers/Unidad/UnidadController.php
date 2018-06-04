@@ -39,6 +39,10 @@ class UnidadController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'unidad' => 'required|string|unique:latigo2018_unidad,DESCRIPCION',
+        ]);
+
         DB::insert('call sp_registrar_unidad (?);', [$request->input('unidad')]);
 
         return redirect('unidad');

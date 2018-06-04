@@ -74,10 +74,8 @@
 		  			<thead>
 		  				<tr>
 		  					<th>Nombres</th>
+		  					<th>Usuario</th>
 		  					<th>Perfil</th>
-		  					<th>Estado</th>
-		  					<th>Email</th>
-		  					<th>Teléfono</th>
 		  					<th>Especialidad</th>
 		  					<th>Unidad</th>
 		  				</tr>
@@ -85,13 +83,11 @@
 		  			<tbody>
 		  				@foreach($usuarios as $usuario)
 		  					<tr>
-		  						<td>{{ $usuario->NOMBRE }}</td>
-		  						<td>{{ $usuario->ID_PERFIL }}</td>
-		  						<td>{{ $usuario->ESTADO }}</td>
-		  						<td>{{ $usuario->CORREO }}</td>
-		  						<td>{{ $usuario->TELEFONO }}</td>
-		  						<td>{{ $usuario->ESPECIALIDAD }}</td>
-		  						<td>{{ $usuario->unidad->ID_UNIDAD }}</td>
+		  						<td>{{ $usuario->nombre }}</td>
+		  						<td>{{ $usuario->nom_usuario }}</td>
+		  						<td>{{ $usuario->perfil->PERFIL }}</td>
+		  						<td>{{ $usuario->especialidad }}</td>
+		  						<td>{{ $usuario->unidad->DESCRIPCION }}</td>
 		  					</tr>
 		  				@endforeach
 		  			</tbody>

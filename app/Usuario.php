@@ -21,6 +21,11 @@ class Usuario extends Authenticatable
 
     public function unidad()
     {
-    	return $this->hasOne('App\Unidad');
+    	return $this->belongsTo('App\Unidad', 'id_unidad', 'ID_UNIDAD');
+    }
+
+    public function perfil()
+    {
+        return $this->belongsTo('App\Perfil', 'id_perfil', 'ID_PERFIL');
     }
 }
